@@ -1,0 +1,19 @@
+
+.heading {
+    width: 100%;
+    text-align: left;
+    background-color: rgb(249, 49, 49);
+}
+
+.heading h1 {
+    display: inline;
+}
+
+.heading button{
+    float: right;
+    background-color: rgb(255, 94, 94);
+}
+
+#start, #status{
+    font-size: 22px;
+}
