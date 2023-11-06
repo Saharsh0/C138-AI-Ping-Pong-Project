@@ -17,3 +17,14 @@
 #start, #status{
     font-size: 22px;
 }
+
+canvas
+{
+    border-radius: 20px;
+    border: solid 5px yellow;
+}
+
+#footer
+{
+    text-align: center;
+}
