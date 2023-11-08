@@ -1,6 +1,10 @@
 
 /*created by prashant shukla */
 
+wristX = "";
+wristY = "";
+scoreRightWrist = "";
+
 var paddle2 =10,paddle1=10;
 
 var paddle1X = 10,paddle1Height = 110;
@@ -36,6 +40,16 @@ function modelLoaded()
   console.log("Model Loaded!");
 }
 
+function gotPoses(results)
+{
+  if(results.length > 0)
+  {
+    console.log(results);
+    wristX = results[0].pose.rightWrist.x;
+    wristY = results[0].pose.rightWrist.y;
+    scoreRightWrist = results[0].pose.keypoints[10].score
+  }
+}
 
 function draw(){
 
@@ -49,6 +63,13 @@ function draw(){
  stroke("black");
  rect(0,0,20,700);
  
+ if(scoreRightWrist > 0.2)
+ {
+    fill("red");
+    stroke("red");
+    circle(wristX, wristY, 20)
+ }
+
    //funtion paddleInCanvas call 
    paddleInCanvas();
  
